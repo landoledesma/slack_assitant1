@@ -1,6 +1,6 @@
 # Asistente AI para Slack con Python & LangChain
 
-Aquí tienes una guía paso a paso para crear un bot en Slack, instalarlo en un espacio de trabajo, configurar un código Python con Flask y usar ngrok.
+Aquí tienes una guía paso a paso para crear un bot en Slack, instalarlo en un espacio de trabajo, configurar un código Python con FastApi y usar ngrok.
 
 Interactuar con agentes AI a través de Slack ofrece una forma de comunicación más natural e integra con el flujo de trabajo de tu equipo, permitiendo la incorporación de múltiples bots para diversas tareas. Esto puede mejorar la eficiencia y agilizar la comunicación, al mismo tiempo que permite que los agentes AI se conviertan en una parte integral de tu equipo.
 
@@ -60,7 +60,7 @@ conda activate myenv
 pip install slack-sdk slack-bolt Flask
 ```
 
-#### 2. Crea el script Python con Flask
+#### 2. Crea el script Python con FastApi
 
 - Crea un nuevo archivo Python (por ejemplo, `app.py`) e inserta el código de [`app.py`](https://github.com/daveebbelaar/langchain-experiments/blob/main/slack/app.py) de este repositorio.
 - Si deseas usar una versión gratuita, puedes explorar los otros modelos soportados por [LangChain's Model](https://python.langchain.com/en/latest/modules/models/llms/integrations.html).
@@ -76,7 +76,7 @@ SLACK_BOT_USER_ID = "tu-id-de-bot"
 OPENAI_API_KEY= "tu-llave-openai"
 ```
 
-#### 4. Inicia tu servidor local Flask
+#### 4. Inicia tu servidor local FastApi
 
 - Ejecuta el script Python en la terminal (macOS/Linux) o en la Línea de Comandos (Windows): `python app.py`. El servidor debería iniciar y verás una salida que indica que está funcionando en [http://127.0.0.1:5000/](http://127.0.0.1:5000/).
 

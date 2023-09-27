@@ -21,20 +21,6 @@ fastapi_app = FastAPI()
 # Flask is a web application framework written in Python
 handler = SlackRequestHandler(app)
 
-def my_function(text):
-    """
-    Custom function to process the text and return a response.
-    In this example, the function converts the input text to uppercase.
-
-    Args:
-        text (str): The input text to process.
-
-    Returns:
-        str: The processed text.
-    """
-    response = text.upper()
-    return response
-
 @app.event("app_mention")
 def handle_mentions(body, say):
     """
@@ -66,7 +52,7 @@ async def slack_events(request: Request):
     return await handler.handle(request)
 
 
-# Run the Flask app
+# Run the FastApi
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(fastapi_app, host="0.0.0.0", port=8000)
